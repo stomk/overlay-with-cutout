@@ -23,7 +23,7 @@ class App extends Component {
             </button>
           )}
         </OverlayWithCutout>
-        <div id="portal-root" style={{ position: "relative" }} />
+        <div id="portal-root" />
       </main>
     );
   }

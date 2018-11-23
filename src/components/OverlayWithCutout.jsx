@@ -14,16 +14,24 @@ class OverlayWithCutout extends React.Component {
   constructor(props) {
     super(props);
     this.portalRoot = null;
+    this.portal = null;
     this.targetRef = null;
   }
   componentDidMount() {
     this.portalRoot = document.getElementById("portal-root");
+    this.portal = document.createElement("div");
+    this.portal.style.position = "relative";
+    this.portalRoot.appendChild(this.portal);
     this.forceUpdate();
+  }
+
+  componentWillUnmount() {
+    this.portalRoot.removeChild(this.portal);
   }
 
   getCutoutPosition = () => {
     const targetRect = this.targetRef.getBoundingClientRect();
-    const portalRect = this.portalRoot.getBoundingClientRect();
+    const portalRect = this.portal.getBoundingClientRect();
     let top = targetRect.top - portalRect.top;
     let left = targetRect.left - portalRect.left;
     let width = this.props.width || targetRect.width;
@@ -47,7 +55,7 @@ class OverlayWithCutout extends React.Component {
     return (
       <>
         {this.props.children({ setRef: ref => (this.targetRef = ref) })}
-        {this.portalRoot &&
+        {this.portal &&
           this.targetRef &&
           createPortal(
             <div
@@ -58,7 +66,7 @@ class OverlayWithCutout extends React.Component {
                 borderRadius: this.props.borderRadius
               }}
             />,
-            this.portalRoot
+            this.portal
           )}
       </>
     );
