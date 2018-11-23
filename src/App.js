@@ -10,32 +10,19 @@ class App extends Component {
   };
 
   render() {
+    const style = this.state.byWidthAndHeight
+      ? { width: 200, height: 150 }
+      : { padding: 100, borderRadius: 20 };
     return (
       <main>
-        <button onClick={this.toggle}>Toggle</button>
-        {this.state.byWidthAndHeight ? (
-          <>
-            width: 200px, height: 150px
-            <OverlayWithCutout width={200} height={150}>
-              {({ setRef }) => (
-                <button className="main-button" ref={setRef}>
-                  Click me!
-                </button>
-              )}
-            </OverlayWithCutout>
-          </>
-        ) : (
-          <>
-            padding: 100px, border-radius: 20px
-            <OverlayWithCutout padding={100} borderRadius={20}>
-              {({ setRef }) => (
-                <button className="main-button" ref={setRef}>
-                  Click me!
-                </button>
-              )}
-            </OverlayWithCutout>
-          </>
-        )}
+        {JSON.stringify(style)}
+        <OverlayWithCutout {...style}>
+          {({ setRef }) => (
+            <button ref={setRef} onClick={this.toggle}>
+              Click me!
+            </button>
+          )}
+        </OverlayWithCutout>
         <div id="portal-root" style={{ position: "relative" }} />
       </main>
     );
