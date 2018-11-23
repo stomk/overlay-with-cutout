@@ -1,13 +1,13 @@
 {
-  "main.css": "/static/css/main.e9b1cfe6.chunk.css",
-  "main.js": "/static/js/main.d446838d.chunk.js",
-  "main.js.map": "/static/js/main.d446838d.chunk.js.map",
-  "static/js/1.0870fde6.chunk.js": "/static/js/1.0870fde6.chunk.js",
-  "static/js/1.0870fde6.chunk.js.map": "/static/js/1.0870fde6.chunk.js.map",
-  "runtime~main.js": "/static/js/runtime~main.229c360f.js",
-  "runtime~main.js.map": "/static/js/runtime~main.229c360f.js.map",
-  "static/css/main.e9b1cfe6.chunk.css.map": "/static/css/main.e9b1cfe6.chunk.css.map",
-  "index.html": "/index.html",
-  "precache-manifest.bb0e0137876dde468a20c36f951a1f8f.js": "/precache-manifest.bb0e0137876dde468a20c36f951a1f8f.js",
-  "service-worker.js": "/service-worker.js"
+  "main.css": "/overlay-with-cutout/static/css/main.e9b1cfe6.chunk.css",
+  "main.js": "/overlay-with-cutout/static/js/main.97b14473.chunk.js",
+  "main.js.map": "/overlay-with-cutout/static/js/main.97b14473.chunk.js.map",
+  "static/js/1.0870fde6.chunk.js": "/overlay-with-cutout/static/js/1.0870fde6.chunk.js",
+  "static/js/1.0870fde6.chunk.js.map": "/overlay-with-cutout/static/js/1.0870fde6.chunk.js.map",
+  "runtime~main.js": "/overlay-with-cutout/static/js/runtime~main.9f33f607.js",
+  "runtime~main.js.map": "/overlay-with-cutout/static/js/runtime~main.9f33f607.js.map",
+  "static/css/main.e9b1cfe6.chunk.css.map": "/overlay-with-cutout/static/css/main.e9b1cfe6.chunk.css.map",
+  "index.html": "/overlay-with-cutout/index.html",
+  "precache-manifest.dd39ae29f692d0055fc1bc4aa5d3c0b5.js": "/overlay-with-cutout/precache-manifest.dd39ae29f692d0055fc1bc4aa5d3c0b5.js",
+  "service-worker.js": "/overlay-with-cutout/service-worker.js"
 }
