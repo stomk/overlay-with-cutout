@@ -2,7 +2,7 @@ main {
   height: 1000px;
 }
 
-button {
+.main-button {
   display: block;
   margin: 200px auto 0;
 }
