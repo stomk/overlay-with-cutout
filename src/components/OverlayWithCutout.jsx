@@ -4,6 +4,12 @@ import { createPortal } from "react-dom";
 import styles from "./OverlayWithCutout.module.css";
 
 class OverlayWithCutout extends React.Component {
+  static defaultProps = {
+    width: null,
+    height: null,
+    padding: 0
+  };
+
   constructor(props) {
     super(props);
     this.portalRoot = null;
@@ -17,9 +23,17 @@ class OverlayWithCutout extends React.Component {
   getCutoutPosition = () => {
     const targetRect = this.targetRef.getBoundingClientRect();
     const portalRect = this.portalRoot.getBoundingClientRect();
-    const top = targetRect.top - portalRect.top;
-    const left = targetRect.left - portalRect.left;
-    return { top, left, width: targetRect.width, height: targetRect.height };
+    const width = this.props.width || targetRect.width;
+    const height = this.props.height || targetRect.height;
+    let top = targetRect.top - portalRect.top;
+    let left = targetRect.left - portalRect.left;
+    if (this.props.height) {
+      top += (targetRect.height - this.props.height) / 2;
+    }
+    if (this.props.width) {
+      left += (targetRect.width - this.props.width) / 2;
+    }
+    return { top, left, width, height };
   };
 
   render() {

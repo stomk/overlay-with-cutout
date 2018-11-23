@@ -6,7 +6,7 @@ class App extends Component {
   render() {
     return (
       <main>
-        <OverlayWithCutout>
+        <OverlayWithCutout width={200} height={150}>
           {({ setRef }) => <button ref={setRef}>Click me!</button>}
         </OverlayWithCutout>
         <div id="portal-root" style={{ position: "relative" }} />
