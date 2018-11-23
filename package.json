@@ -2,7 +2,7 @@
   "name": "overlay-with-cutout",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://stomk.github.io/overlay-with-cutout",
+  "homepage": "https://stomk.github.io/overlay-with-cutout",
   "dependencies": {
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
