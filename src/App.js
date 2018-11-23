@@ -26,8 +26,8 @@ class App extends Component {
           </>
         ) : (
           <>
-            padding: 100px
-            <OverlayWithCutout padding={100}>
+            padding: 100px, border-radius: 20px
+            <OverlayWithCutout padding={100} borderRadius={20}>
               {({ setRef }) => (
                 <button className="main-button" ref={setRef}>
                   Click me!

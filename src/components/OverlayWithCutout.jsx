@@ -7,7 +7,8 @@ class OverlayWithCutout extends React.Component {
   static defaultProps = {
     width: null,
     height: null,
-    padding: 0
+    padding: 0,
+    borderRadius: 0
   };
 
   constructor(props) {
@@ -51,7 +52,11 @@ class OverlayWithCutout extends React.Component {
           createPortal(
             <div
               className={styles.base}
-              style={{ position: "absolute", ...this.getCutoutPosition() }}
+              style={{
+                position: "absolute",
+                ...this.getCutoutPosition(),
+                borderRadius: this.props.borderRadius
+              }}
             />,
             this.portalRoot
           )}
